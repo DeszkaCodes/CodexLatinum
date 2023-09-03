@@ -5,6 +5,8 @@ Are you a doctor, lawyer perhaps? You feel like you choose the wrong career path
 
 Well **Codex Latinum** is just for you! Now you can enjoy programming and the beautiful language of ancient Rome.
 
-**Codex Latinum** is a custom made programming language made in my ~~mother's basement~~ free time.
+**Codex Latinum** is a custom made programming language made in my free time.
+
+The compiler is written in C++ (I barely use C++ so the code will probably will be unusual) and currently will only support Linux.
 
 This project is made as a fun side-project of course and musn't be taken seriously.
