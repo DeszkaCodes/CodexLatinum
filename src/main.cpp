@@ -16,6 +16,19 @@ struct Token {
     std::optional<std::string> value;
 };
 
+void write_asm(const std::string& source) {
+    std::fstream output("./generated.asm", std::ios::out);
+    
+    output << source;
+
+    output.close();
+
+    system("nasm -felf64 generated.asm");
+    system("ld -o program generated.o");
+
+    system("rm generated.asm && rm generated.o");
+}
+
 std::string tokens_to_asm(const std::vector<Token>& tokens) {
     std::stringstream output;
 
@@ -142,6 +155,8 @@ int main(int argc, char* argv[]) {
     std::string assembly = tokens_to_asm(tokens);
 
     std::cout << assembly << "\n";
+
+    write_asm(assembly);
 
     return EXIT_SUCCESS;
 }
