@@ -1,0 +1,3 @@
+/home/deszka/dev/proj/CodexLatinum/CMakeFiles/codex.dir
+/home/deszka/dev/proj/CodexLatinum/CMakeFiles/edit_cache.dir
+/home/deszka/dev/proj/CodexLatinum/CMakeFiles/rebuild_cache.dir
