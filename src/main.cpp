@@ -2,6 +2,18 @@
 #include <stdlib.h>
 #include <fstream>
 #include <sstream>
+#include <optional>
+
+enum class TokenType {
+    _return,
+    int_lit,
+    semicol
+};
+
+struct Token {
+    TokenType type;
+    std::optional<std::string> value;
+};
 
 std::string read_file(const char* path) {
     std::string file_lines;
