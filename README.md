@@ -10,3 +10,9 @@ Well **Codex Latinum** is just for you! Now you can enjoy programming and the be
 The compiler is written in C++ (I barely use C++ so the code will probably will be unusual) and currently will only support Linux.
 
 This project is made as a fun side-project of course and musn't be taken seriously.
+
+## Current keywords
+
+| Keyword | Function |
+|---------|----------|
+| reditus | return   |
