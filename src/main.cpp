@@ -3,8 +3,8 @@
 #include <fstream>
 #include <sstream>
 
-std::string* read_file(const char* path) {
-    std::string* file_lines;
+std::string read_file(const char* path) {
+    std::string file_lines;
     {
         std::fstream input(path, std::ios::in);
         std::stringstream contents_stream;
@@ -13,7 +13,7 @@ std::string* read_file(const char* path) {
 
         input.close();
 
-        file_lines = &contents_stream.str();
+        file_lines = contents_stream.str().c_str();
     }
 
     return file_lines;
@@ -26,8 +26,7 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    std::string* file_lines(read_file(argv[1]));
-
+    std::string file_lines(read_file(argv[1]));
 
     return EXIT_SUCCESS;
 }
